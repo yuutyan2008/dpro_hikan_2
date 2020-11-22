@@ -11,11 +11,8 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build(order_params)
     @order.save
-    @order.line_items.each do |line_item|
-      item = Item.find_by(id: line_item.item_id)
-      item.ordering_totals += line_item.quantity
-      item.save
-    end
+    @order.update_total_quantity
+    # update_total_quantityメソッドは、注文された発注量をitemに反映するメソッドであり、Orderモデルに定義されています。
     redirect_to orders_path
   end
 

@@ -8,6 +8,6 @@ class ItemsController < ApplicationController
   private
 
   def admin_required
-    redirect_to current_user unless current_user.admin?
+    redirect_to orders_path unless current_user.admin?
   end
 end
