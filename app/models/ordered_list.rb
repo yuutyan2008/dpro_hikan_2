@@ -1,4 +1,4 @@
-class LineItem < ApplicationRecord
+class OrderedList < ApplicationRecord
   belongs_to :order
   belongs_to :item
 end

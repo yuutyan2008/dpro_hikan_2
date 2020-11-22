@@ -13,14 +13,14 @@ RSpec.describe Order, type: :model do
         threads << Thread.new do
           ActiveRecord::Base.connection_pool.with_connection do
             order = Order.create(user_id: user1.id)
-            line_item = LineItem.create(order_id: order.id, item_id: item.id, quantity: 5)
+            ordered_list = OrderedList.create(order_id: order.id, item_id: item.id, quantity: 5)
             order.update_total_quantity
           end
         end
         threads << Thread.new do
           ActiveRecord::Base.connection_pool.with_connection do
             order = Order.create(user_id: user2.id)
-            line_item = LineItem.create(order_id: order.id, item_id: item.id, quantity: 5)
+            ordered_list = OrderedList.create(order_id: order.id, item_id: item.id, quantity: 5)
             order.update_total_quantity
           end
         end

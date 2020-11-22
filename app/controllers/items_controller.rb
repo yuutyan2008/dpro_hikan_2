@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :admin_required, only: [:index]
 
   def index
-    @items = Item.all.order(created_at: :asc)
+    @items = Item.all.order(:created_at)
   end
 
   private

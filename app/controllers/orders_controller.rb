@@ -5,7 +5,8 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @order.line_items.build
+    @order.ordered_lists.build
+    @items = Item.all.order(:created_at)
   end
 
   def create
@@ -19,7 +20,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(line_items_attributes: [:item_id, :quantity])
+    params.require(:order).permit(ordered_lists_attributes: [:item_id, :quantity])
   end
 
 end

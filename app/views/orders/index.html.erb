@@ -7,9 +7,9 @@
 <tr><td width=100px>商品名</td><td>注文数</td></tr>
 </thead>
 <tbody>
-  <% order.line_items.order(item_id: :asc).each do |line_item| %>
-    <% if line_item.quantity != 0 %>
-      <tr><td><%= Item.find_by(id: line_item.item_id).name %></td><td><%= line_item.quantity %></td></tr>
+  <% order.ordered_lists.order(item_id: :asc).each do |ordered_list| %>
+    <% if ordered_list.quantity != 0 %>
+      <tr><td><%= Item.find_by(id: ordered_list.item_id).name %></td><td><%= ordered_list.quantity %></td></tr>
     <% end %>
   <% end %>
 </table>
