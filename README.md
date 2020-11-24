@@ -16,7 +16,7 @@ $ rails db:seed
 - Email:`user@gmail.com`
 - Password:`password`
 
-[![Image from Gyazo](https://t.gyazo.com/teams/diveintocode/1992cfe501b3db3e0abde7cf517409c2.gif)](https://diveintocode.gyazo.com/1992cfe501b3db3e0abde7cf517409c2)
+[![Image from Gyazo](https://t.gyazo.com/teams/diveintocode/97f0bf381c7c01ff3ecbf4809cdf3e9a.gif)](https://diveintocode.gyazo.com/97f0bf381c7c01ff3ecbf4809cdf3e9a)
 
 ## 発注された総数を確認する
 
@@ -24,6 +24,6 @@ $ rails db:seed
 - Email:`admin@gmail.com`
 - Password:`password`
 
-[![Image from Gyazo](https://t.gyazo.com/teams/diveintocode/1fdc6626099a891ed9811b4203198b55.gif)](https://diveintocode.gyazo.com/1fdc6626099a891ed9811b4203198b55)
+[![Image from Gyazo](https://t.gyazo.com/teams/diveintocode/2064f2049810cabf9d8fb7eb9216ed5b.gif)](https://diveintocode.gyazo.com/2064f2049810cabf9d8fb7eb9216ed5b)
 
 すべての一般ユーザから注文された商品の総数が表示されます。
