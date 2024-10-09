@@ -10,7 +10,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    ActiveRecord::Base.transaction do
       @order = current_user.orders.find(params[:order_id])
     
       # if @order.nil?
@@ -20,7 +19,7 @@ class OrdersController < ApplicationController
 
       # update_total_quantity メソッドは、注文された発注量を総量に反映するメソッドであり、Orderモデルに定義されています。
       @order.update_total_quantity
-    end
+
     redirect_to orders_path
   end
 
